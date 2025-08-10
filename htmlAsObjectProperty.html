@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript HTML as a property</h1>
+<p>How to render HTML property as code:</p>
+<p id="demo"></p>
+<script>
+    const htmlBlock = {
+        header: "Welcome!",
+        //body: "<p>This is a paragraph.</p><button>Click me</button>", // Пример А который работает
+        // headerOne: `<h2>${this.header}</h2>` // Пример Б который не работает
+        body() { // Пример В который работает, метод - возвращает строку HTML это сокращение от function body() { ... } работает так же
+            return `<p>This is a paragraph.</p><button>Click me</button>`;
+        }
+        /* get html() { // Пример Г который работает, геттер - возвращает строку HTML вызывается как обычный метод
+            return `<p>This is a paragraph.</p><button>Click me</button>`;
+        } */
+    };
+    //demo.innerHTML = htmlBlock.body; // Пример А который работает
+    // demo.innerHTML = htmlBlock.headerOne; // Пример Б который не работает потому что this не работает в объекте. Будет undefined
+    demo.innerHTML = htmlBlock.body(); // Пример В который работает потому что функция возвращает строку HTML
+</script>
+</body>
+</html>

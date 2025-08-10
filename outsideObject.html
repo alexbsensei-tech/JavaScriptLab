@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Retrieve items from object properties.</h2>
+<p>Let's get contents of the woods</p>
+<p id="demo"></p>
+<script>
+    const outside = {
+            woods: ['birch', 'aspen', 'oak'],
+            station: ['train', 'platform', 'semaphore'],
+            prairie: ['grass', 'marsh', 'hills'],
+            poles: ['cables', 'signs', 'lights'],
+            sky: ['clouds', 'sunshine', 'airplane'],
+            village: ['houses', 'yards', 'cars'],
+            getAll: function() {
+                let text = '';
+                for (x in this.woods) {
+                    text += this.woods[x] + ' ';
+                }
+                return demo.innerHTML = text;
+            }
+    };
+    outside.getAll();
+ /*   function getAll () {
+        let text = '';
+        for (x in outside.woods) {
+            text += outside.woods[x] + ' ';
+        };
+        demo.innerHTML = text;
+    }
+   getAll(); */
+</script>
+</body>
+</html>

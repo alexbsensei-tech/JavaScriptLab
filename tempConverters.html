@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h2>Convert from Celsius to Fahrenheit and back</h2>
+    <form>
+        <label>Enter temperature in Celsius
+            <input type="" id="celsiusInput">
+            <button type="button" onclick="convert2F()">Convert</button>
+        </label>
+    </form>
+        <p>In Fahrenheit it's: <span id="tempInF"></span></p>
+    <form>
+        <label>Enter temperature in Fahrenheit
+            <!-- <input type="number" id="fahrenheitInput" oninput="convert2C()"> -->
+             <input type="number" id="fahrenheitInput"> 
+             <button type="button" onclick="convert2C()">Convert</button>
+        </label>
+    </form>
+        <p>In Celsius it's: <span id="tempInC"></span></p> 
+    <script src="js/coverters.js"></script>
+</body>
+</html>

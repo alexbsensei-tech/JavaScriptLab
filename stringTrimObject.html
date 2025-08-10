@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>JavaScript Strings</h1>
+    <h2>The trim() Method using Object</h2>
+    <p id="demo"></p>
+    <script>
+        const tools = {
+            stringTrim: function(text) {
+                return text.trim();
+            }
+        };
+        demo.innerHTML = "Length text1 = " + ("     Hello World!     ").length + 
+        "<br>Length text2 = " + tools.stringTrim("     Hello World!     ").length;
+    </script>
+</body>
+</html>

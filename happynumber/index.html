@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link id="theme" rel="stylesheet" type="text/css" href="css/dark.css" />
+</head>
+
+
+<body>
+<button onclick="toggleTheme()">Change theme</button>
+	<div class = "head">
+		<h1>Check if a number is a Happy number</h1> 
+	</div>	
+	<div class = "main">		
+		<h3><i>Happy number</i></h3>
+			<p>In number theory, a happy number is a number which eventually reaches 1 when replaced by the sum of the square of each digit. For instance, 13 is a happy number because: 1^2+3^2=10, AND 1^2+0^2=1. 
+			On the other hand, 4 is not a happy number because the sequence starting with 4^2=16 and 1^2+6^2=37 eventually reaches 2^2+0^2=4, the number that started the sequence, and so the process continues in an infinite cycle without ever reaching 1. 
+			A number which is not happy is called sad or unhappy. </p> 
+	</div>
+    
+	<div class = "result">
+		<h2>Enter an integer</h2>
+		<input type="number" id="num" ><br>
+		<button onclick="displayMessage()">Submit</button>
+		<p id="showinputhere"></p>
+	</div>
+
+<script>
+
+function numSquareSum(n)
+
+{
+	var squareSum = 0;
+	while (n!= 0)
+	{
+		squareSum += (n % 10) * (n % 10);
+		n = parseInt(n/10);
+	}
+	return squareSum;
+}
+
+// method returns true if n is a Happy number
+function isHappynumber(n)
+
+{
+	var slow, fast;
+
+	// initialize slow and fast by n
+	slow = fast = n;
+	do
+	{
+		// move slow number
+		// by one iteration
+		slow = numSquareSum(slow);
+
+		// move fast number
+		// by two iterations
+		fast = numSquareSum(numSquareSum(fast));
+
+	}
+	while (slow != fast);
+
+	// if both numbers meet at 1,
+	// then return true
+	return (slow == 1);
+}
+
+function displayMessage(){
+    let n = document.getElementById("num").value;
+    if (isHappynumber(n))
+        document.getElementById("showinputhere").innerHTML = n + " is a Happy number";
+    else
+        document.getElementById("showinputhere").innerHTML = n + " is a sad number";
+   
+}
+
+
+</script>
+<script src="toggletheme.js" async defer></script>
+</body>
+</html>

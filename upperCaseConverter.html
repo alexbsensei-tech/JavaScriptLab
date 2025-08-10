@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Conver to Upper Case</title>
+</head>
+<body>
+    <h1>Convert to Upper Case</h1>
+    <input type="text" id="word" placeholder="Enter a word">
+    <button onclick="myTool.convertToUpper()">Convert</button>
+    <p id="result"></p>
+   <script>
+    // Constructor function simplified version
+    function Tools() {
+      this.convertToUpper = function() {
+        result.innerHTML = word.value.toUpperCase();
+      };
+    }
+    // Create a Tools object
+    const myTool = new Tools();
+    // Constructor function to create a new covert to upper case object
+    //function Tools(word, result) {
+    //  this.Word = word;
+    //  this.Result = result;
+    //  this.convertToUpper = function() {
+    //    this.Result.innerHTML = this.Word.value.toUpperCase();
+    //  };
+    //}
+    // Create a Tools object
+    //const myTool = new Tools(word, result);
+
+    // --------------------------------------
+    // Object to handle the conversion
+    //const convert = {
+    //  upperCase: function() {
+    //    result.innerHTML = word.value.toUpperCase();
+    //  }
+    //};
+    // Call the object method using onclick="convert.upperCase()"
+    // --------------------------------------
+    //Simplified function to convert text to upper case
+    // function convertToUpper() {
+    //  result.innerHTML = word.value.toUpperCase();
+    // }
+    // --------------------------------------
+    //Long version of the function to convert text to upper case
+      //  function countLetters() {
+      //      result.innerHTML = word.value.length;
+      //      return false; // предотвращает отправку формы
+            //const word = document.getElementById('word').value;
+            //const result =  word.toUpperCase();
+            //document.getElementById('result').innerHTML = result;
+      //  }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Primitive String</h1>
+    <p id="string"></p>
+    <h1>Primitive Number</h1>
+    <p id="number"></p>
+    <script>
+        // Strings have indices as enumerable own properties
+        let str = "foo";
+        document.getElementById("string").innerHTML = str[0];
+        let number = 100;
+        //document.getElementById("number").innerHTML = number[0];
+        document.getElementById("number").innerHTML = number.toString()[0];
+
+        //document.getElementById("string").innerHTML = (Object.keys("foo")); // ['0', '1', '2']
+        // Other primitives except undefined and null have no own properties
+        //document.getElementById("number").innerHTML = (Object.keys(100)); // []
+    </script>
+</body>
+</html>

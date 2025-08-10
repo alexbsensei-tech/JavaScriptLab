@@ -1,0 +1,8 @@
+console.log(Number(42));        // 42 (number remains unchanged)
+console.log(Number("3.14"));     // 3.14 (string converted to a number)
+console.log(Number("hello"));    // NaN (invalid number format)
+console.log(Number(true));       // 1 (boolean true becomes 1)
+console.log(Number(false));      // 0 (boolean false becomes 0)
+console.log(Number(null));       // 0 (null is converted to 0)
+console.log(Number(undefined));  // NaN (undefined cannot be converted)
+console.log(Number({}));         // NaN (empty object has no numeric representation)

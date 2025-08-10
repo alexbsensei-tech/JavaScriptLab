@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Teller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f8f9fa;
+        }
+        .fortune {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+<script>
+    // Array of fortunes
+    const fortunes = [
+        "You will write legendary JavaScript code!",
+        "An exciting project awaits you!",
+        "Expect a breakthrough in your creative coding!",
+        "A CSS animation idea will spark new inspiration!",
+        "You will master JSON-driven UI components!"
+    ];
+    // Pick a random fortune
+    const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+    // Display the fortune using document.write()
+    document.write('<p class="fortune">' + randomFortune + '</p>');
+</script>
+</body>
+</html>

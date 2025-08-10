@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <button onclick="myFunction()">Click me</button>
+
+        <p id="demo"></p>
+        
+        <p>A function is triggered when the button is clicked. The function outputs some text in a p element with id="demo".</p>
+        <br>
+        <img id="image">
+        <br>
+        <button onclick="showImage()">Show Image</button>
+        <button onclick="hideImage()">Hide Image</button>
+        <script>
+        function myFunction() {
+          document.getElementById("demo").innerHTML = "Привет СоВа!";
+        }
+
+        function showImage() {
+            document.getElementById("image").src = "images/gLogo.webp";
+        }
+
+        function hideImage() {
+            document.getElementById("image").src = "";
+        }
+
+        </script>
+
+    </body>
+</html>

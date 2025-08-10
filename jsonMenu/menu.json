@@ -1,0 +1,15 @@
+{
+    "menuItems": [
+        { "name": "Home", "link": "index.html" },
+        {
+            "name": "About",
+            "link": "about.html",
+            "submenu": [
+                { "name": "Our Team", "link": "team.html" },
+                { "name": "Our History", "link": "history.html" }
+            ]
+        },
+        { "name": "Services", "link": "services.html" },
+        { "name": "Contact", "link": "contact.html" }
+    ]
+}

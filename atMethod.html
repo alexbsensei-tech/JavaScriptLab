@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>JavaScript Strings</h1>
+    <h2>The at() Method</h2>
+    <p>The at() method returns an indexed element from a string:</p>
+    <p id="demo"></p>
+    <script>
+        const name = "live";
+        for (x in name) {
+            demo.innerHTML += name.at(-x-1);
+            // demo.innerHTML += name.at(x); // Displays the string in forward order
+        }
+        demo.innerHTML += " is ";
+        for (let x = -1; -x <= name.length; x--) {
+            demo.innerHTML += name.at(x);
+        }
+    </script>
+</body>
+</html>

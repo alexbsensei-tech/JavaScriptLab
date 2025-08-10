@@ -1,0 +1,8 @@
+<input type="checkbox" id="subscribeCheckbox"> Subscribe to newsletter
+<button onclick="checkSubscription()">Check</button>
+<script>
+    function checkSubscription() {
+        let isChecked = document.getElementById("subscribeCheckbox").checked;
+        alert(isChecked ? "Subscribed!" : "Not subscribed.");
+    }
+</script>

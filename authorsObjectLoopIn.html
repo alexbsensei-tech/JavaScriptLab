@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Objects</h1>
+    <p id="demo"></p>
+    <script>
+        const artists = {
+                artist1: { name: "Lina Zhang", specialty: "Calligraphy", country: "China" },
+                artist2: { name: "Mateo Alvarez", specialty: "Street Art", country: "Mexico" },
+                artist3: { name: "Anya Petrov", specialty: "Oil Painting", country: "Russia" },
+                artist4: { name: "Kwame Okoro", specialty: "Sculpture", country: "Ghana" },
+                artist5: { name: "Haruki Yamamoto", specialty: "Ink Illustration", country: "Japan" },
+                artist6: { name: "Sofia Ricci", specialty: "Fashion Design", country: "Italy" },
+                artist7: { name: "Layla Haddad", specialty: "Henna Art", country: "Morocco" },
+                artist8: { name: "Maxime Lefevre", specialty: "Modern Dance", country: "France" },
+                artist9: { name: "Ava Thompson", specialty: "Digital Art", country: "Canada" },
+                artist10: { name: "Rajesh Mehta", specialty: "Sand Animation", country: "India" },
+                loopGet: function() {
+                            let text = "";        
+                            for (let x in this) {
+                                if (x !== "loopGet") { // Ensure loopGet itself is not included
+                                    let artist = this[x];
+                                    text += `${artist.name} - ${artist.specialty} (${artist.country})<br>`;
+                                }
+                        }
+                        document.getElementById("demo").innerHTML = text;
+                }
+        };  
+        artists.loopGet();
+    </script>
+</body>
+</html>

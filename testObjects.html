@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>JavaScript Objects</h1>
+    <h2>How to use Objects</h2>
+    <input type="number" id="numberOne">
+    <input type="number" id="numberTwo">
+    <button onclick="math.addition()">Add</button>
+    
+    <p id="demo"></p>
+    <p id="test"></p>
+    <script>
+        const math = {
+            addition: function() {
+                const num1 = Number(document.getElementById("numberOne").value);
+                const num2 = Number(document.getElementById("numberTwo").value);
+                document.getElementById("demo").innerHTML = this.num1 + this.num2;
+            }
+        };
+        // demo.innerHTML = math.addition();
+            // const num1 = Number(document.getElementById("numberOne").value);
+            // const num2 = Number(document.getElementById("numberTwo").value);
+    </script>
+</body>
+</html>

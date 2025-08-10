@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Objects</h1>
+    <p id="demo"></p>
+    <script>
+        const carPrices = {
+                Tesla: { model: "Model 3", price: "$42,990" },
+                BMW: { model: "3 Series", price: "$44,200" },
+                Mercedes: { model: "C-Class", price: "$46,900" },
+                getCars: function() {
+                            let text = "";        
+                            for (let x in this) {
+                                if (x !== "getCars") { // Ensure loopGet itself is not included
+                                    let car = this[x];
+                                    text += `${Object.keys(this)[x]} - ${car.model} - (${car.price})<br>`;
+                                }
+                        }
+                        document.getElementById("demo").innerHTML = text;
+                }
+        };  
+        carPrices.getCars();
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function, Object, Constructor Example</title>
+</head>
+<body>
+<script>
+    // Function: A simple function that returns a greeting
+    function greet(name) {
+        return `Hello, ${name}!`;
+    }
+
+    // Object: A basic object representing a person
+    const person = {
+        firstName: "Alex",
+        lastName: "Smith",
+        age: 30,
+        fullName: function() {
+            return `${this.firstName} ${this.lastName}`;
+        }
+    };
+
+    // Constructor: A function to create multiple person objects
+    function Person(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.fullName = function() {
+            return `${this.firstName} ${this.lastName}`;
+        };
+    }
+
+    // Creating an instance using the constructor
+    const newPerson = new Person("John", "Doe", 25);
+
+    // Example usage
+    console.log(greet("Alex")); // Output: Hello, Alex!
+    console.log(person.fullName()); // Output: Alex Smith
+    console.log(newPerson.fullName()); // Output: John Doe
+</script>

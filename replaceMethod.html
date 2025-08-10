@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>JavaScript String Methods</h1>
+    <p>Replace "Microsoft" with "Amazon" in the paragraph below:</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo">Please visit Microsoft and Microsoft!</p>
+    <script>
+        function myFunction() {
+        let text = demo.innerHTML; 
+        demo.innerHTML =
+        //text.replace(/MiCROSOFT/i,"Amazon");
+        text.replace(/MiCrosoft/gi,"Amazon");
+        }
+    </script>
+</body>
+</html>

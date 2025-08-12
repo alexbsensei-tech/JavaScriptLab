@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>Tagging Elements with Their Index</h2>
+<p>Use case: Adds position info relative to the array length.</p>
+<p id="demo"></p>
+<script>
+   const names = ["Alice", "Bob", "Charlie"];
+    const tagged = names.map((name, index, array) => {
+        return `${index + 1}/${array.length}: ${name}`;
+    });
+    demo.innerHTML = tagged;
+</script>
+</body>
+</html>

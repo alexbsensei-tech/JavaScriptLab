@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>Custom Reduce with Index Awareness</h2>
+<p>Use case: Weighted sum based on reverse index.</p>
+<p id="demo"></p>
+<script>
+    const numbs = [1, 2, 3, 4];
+    const result = numbs.reduce((acc, value, index, array) => {
+        return acc + value * (array.length - index); // Output: 20 → (1×4 + 2×3 + 3×2 + 4×1)
+    }, 0);
+    demo.innerHTML = result; 
+</script>
+</body>
+</html>

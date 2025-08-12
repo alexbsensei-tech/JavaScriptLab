@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>Filtering Based on Neighboring Value</h2>
+<p>Use case: Keeps values that are greater than their predecessor.</p>
+<p id="demo"></p>
+<script>
+    const scores = [10, 20, 30, 40, 50];
+    const filtered = scores.filter((score, index, array) => {
+        return score > array[index - 1] || index === 0;
+    });
+    demo.innerHTML = filtered;
+</script>
+</body>
+</html>

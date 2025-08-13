@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>Checking for Duplicates Using Array</h2>
+<p>Use case: Filters out duplicates by comparing first occurrence</p>
+<p id="demo"></p>
+<script>
+    const items = ["apple", "banana", "apple", "orange"];
+    const unique = items.filter((item, index, array) => {
+        return array.indexOf(item) === index;
+    });
+    demo.innerHTML = unique; 
+</script>
+</body>
+</html>

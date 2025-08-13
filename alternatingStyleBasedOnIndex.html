@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Styled Elements</title>
+  <style>
+    .bold {
+      font-weight: bold;
+    }
+    .italic {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>Alternating Styles Based on Index</h2>
+<p>Use case: Applies alternating styles and includes array context.</p>
+  <div id="container"></div>
+  <script>
+    const elements = ["div", "span", "p"];
+    const styled = elements.map((el, index, array) => {
+      return {
+        tag: el,
+        style: index % 2 === 0 ? "bold" : "italic",
+        total: array.length
+      };
+    });
+    const container = document.getElementById("container");
+    styled.forEach(item => {
+      const element = document.createElement(item.tag);
+      element.className = item.style;
+      element.textContent = `${item.tag.toUpperCase()} - Style: ${item.style} (Total: ${item.total})`;
+      container.appendChild(element);
+    });
+  </script>
+</body>
+</html>

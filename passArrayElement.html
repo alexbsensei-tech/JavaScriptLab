@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Operators</h1>
+<h2>The ... Operator</h2>
+<p>The spread operator (...) can be used to pass array elements to a function:</p>
+<p id="demo"></p>
+<script>
+    const numbers = [23,55,21,87,56];
+    let minValue = Math.min(...numbers);
+    let maxValue = Math.max(...numbers);
+    demo.innerHTML = "Min = " + minValue + "<br>Max = " + maxValue; 
+</script>
+</body>
+</html>

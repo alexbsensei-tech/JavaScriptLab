@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript switch Controls</h1>
+<h2>The default Keyword</h2>
+<p id="demo"></p>
+<script>
+    let text;
+    switch (new Date().getDay()) {
+    case 6:
+        text = "Today is Saturday";
+        break;
+    case 0:
+        text = "Today is Sunday";
+        break;
+    default:
+        text = "Looking forward to the Weekend";
+    }
+    demo.innerHTML = text;
+</script>
+</body>
+</html>

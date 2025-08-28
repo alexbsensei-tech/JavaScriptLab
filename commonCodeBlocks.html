@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript switch Controls</h1>
+<h2>Common Code Blocks</h2>
+<p>In this example, case 4 and 5 share the same code block, and 0 and 6 share another code block:</p>
+<p id="demo"></p>
+<script>
+    let text;
+    switch (new Date().getDay()) {
+    case 4:
+    case 5:
+        text = "Soon it is Weekend";
+        break;
+    case 0:
+    case 6:
+        text = "It is Weekend";
+        break;
+    default:
+        text = "Looking forward to the Weekend";
+    }
+    demo.innerHTML = text;
+</script>
+</body>
+</html>

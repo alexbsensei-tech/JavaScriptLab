@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Loops</h1>
+<h2>The continue Statement</h2>
+<p>Skip the iteration step when i equals 3.</p>
+<p id="demo"></p>
+<script>
+    let text = "";
+    for (let i = 1; i < 10; i++) {
+        if (i === 3) { continue; }
+        text += i*10 + "<br>";
+    }
+    demo.innerHTML = text;
+</script>
+</body>
+</html>

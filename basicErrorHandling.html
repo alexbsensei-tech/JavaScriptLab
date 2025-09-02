@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>This is a basic example of error handling in JavaScript using try-catch.</h1>
+    <p id = "demo"  style="color: red;"></p>
+</head>
+<body>
+    <script>
+        try {
+            // Trying to use an undefined variable
+            console.log(userName.toUpperCase());
+        } 
+        catch (error) {
+            //demo.innerHTML =  error.message;
+            demo.innerHTML = "Oops! Something went wrong: " + error.message;
+        }
+    </script>
+</body>
+</html>

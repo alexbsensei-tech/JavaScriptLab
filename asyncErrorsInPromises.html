@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Error fetching JSON data file.</h1>
+    <p id = "demo"></p>
+</head>
+<body>
+    <script>
+        async function fetchData() {
+            try {
+                const response = await fetch("https://api.example.com/data");
+                const data = await response.json();
+                console.log("Data received:", data);
+            } 
+            catch (error) {
+                demo.innerHTML = 'Failed to fetch data: <span style="color: red; font-weight: bold;">' + error.message + '</span>';
+            }
+        }
+        fetchData();
+    </script>
+</body>
+</html>

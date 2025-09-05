@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Context Menu</title>
+  <style>
+    #customMenu {
+      display: none;
+      position: absolute;
+      background: #333;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    #customMenu div {
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    #customMenu div:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <h2>Right-click anywhere on the page</h2>
+  <div id="customMenu">
+    <div onclick="alert('Option 1 selected')">Option 1</div>
+    <div onclick="alert('Option 2 selected')">Option 2</div>
+  </div>
+
+  <script>
+    const menu = document.getElementById("customMenu");
+
+    window.addEventListener("contextmenu", function(e) {
+      e.preventDefault(); // Prevent default browser menu
+      menu.style.top = `${e.pageY}px`;
+      menu.style.left = `${e.pageX}px`;
+      menu.style.display = "block";
+    });
+
+    window.addEventListener("click", function() {
+      menu.style.display = "none"; // Hide menu on click
+    });
+  </script>
+</body>
+</html>

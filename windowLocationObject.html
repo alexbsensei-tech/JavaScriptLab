@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Window Location Info</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    .info {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .info p {
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Window Location Details</h1>
+  <div class="info">
+    <p><strong>Full URL:</strong> <span id="href"></span></p>
+    <p><strong>Hostname:</strong> <span id="hostname"></span></p>
+    <p><strong>Pathname:</strong> <span id="pathname"></span></p>
+    <p><strong>Query String:</strong> <span id="search"></span></p>
+    <p><strong>History:</strong> <span id="history"></span></p>
+    <p><strong>Navigator:</strong> <span id="navigator"></span></p>
+  </div>
+
+  <script>
+    // Log to console
+    console.log(window.location.href);      // Full URL
+    console.log(window.location.hostname);  // Domain name
+    console.log(window.location.pathname);  // Path after domain
+    console.log(window.location.search);    // Query string
+
+    // Display on page
+    document.getElementById('href').textContent = window.location.href;
+    document.getElementById('hostname').textContent = window.location.hostname;
+    document.getElementById('pathname').textContent = window.location.pathname;
+    document.getElementById('search').textContent = window.location.search;
+    document.getElementById('history').textContent = window.history.length;
+    document.getElementById('navigator').textContent = window.navigator.clipboard.readText();
+    
+</script>
+</body>
+</html>

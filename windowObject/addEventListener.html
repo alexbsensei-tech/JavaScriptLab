@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Window Object</h1>
+<h2>The addEventListener() Method</h2>
+<p>This example adds two click events to the window.</p>
+<p>Click anywhere in the document.</p>
+<p id="demo"></p>
+<script>
+    window.addEventListener("click", myFunction1);
+    window.addEventListener("click", myFunction2);
+
+    function myFunction1() {
+    document.getElementById("demo").innerHTML += "First function was executed! "
+    }
+
+    function myFunction2() {
+    document.getElementById("demo").innerHTML += "Second function was executed! "
+    }
+    /*  Other Mouse Events
+These are useful if you want more nuanced control over user interaction:
+- "dblclick" — triggers on double-click
+- "mousedown" — when mouse button is pressed
+- "mouseup" — when mouse button is released
+- "mousemove" — when the mouse moves
+- "mouseenter" / "mouseleave" — when the mouse enters or leaves an element
+- "mouseover" / "mouseout" — when the mouse is over or out of an element
+- "contextmenu" — when the right mouse button is clicked (opens context menu)*/
+</script>
+</body>
+</html>

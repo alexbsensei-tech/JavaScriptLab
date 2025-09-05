@@ -1,0 +1,15 @@
+<button onclick="pasteClipboard()">Paste</button>
+<div class="clip-text">Waiting for clipboard...</div>
+
+<script>
+  function pasteClipboard() {
+    navigator.clipboard
+      .readText()
+      .then((clipText) => {
+        document.querySelector(".clip-text").innerText = clipText;
+      })
+      .catch((err) => {
+        console.error("Clipboard read failed:", err);
+      });
+  }
+</script>

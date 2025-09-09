@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Window Object</h1>
+<h2>The open() and close() Method</h2>
+<button onclick="openWin()">Open google.com in a new window</button>
+<button onclick="closeWin()">Close the new window</button>
+<script>
+    let myWindow;
+    function openWin() {
+        myWindow = window.open("https://google.com", "_blank", "width=500, height=500");
+    }
+    function closeWin() {
+        myWindow.close();
+    }
+</script>
+</body>
+</html>

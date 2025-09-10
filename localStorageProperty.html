@@ -5,31 +5,62 @@
 <h1>The Window Object</h1>
 <h2>The localStorage Property</h2>
 
-<p>Saved name is: <span id="demo"></span></p>
+<input type="text" id="fruitInput" placeholder="Enter a fruit">
+<button onclick="saveFruit()">Add Fruit</button>
 
-<button onclick="save()">Save data to LS</button>
-<button onclick="retrieve()">Retrieve data from LS</button>
-<button onclick="remove()">Remove data from LS</button>
+<p>Saved fruits: <span id="demo"></span></p>
+
+<!-- <button onclick="save()">Save data to LS</button> -->
+<button onclick="retrieveFruits()">Retrieve data from LS</button>
+<!--<button onclick="remove()">Remove data from LS</button>-->
 <button onclick="clearStorage()">Clear LS</button>
 
 <script>
 // Save/set Item - сохраняет данные в localStorage
-function save() {
+/*function save() {
     localStorage.setItem("lastname", "Smith");
-}   
-localStorage.setItem("lastname", "Smith");
+    localStorage.setItem("firstname", "John");
+    localStorage.setItem("age", "30");
+}   */
 // Retrieve - получает данные из localStorage
-function retrieve() {
-    demo.innerHTML = localStorage.getItem("lastname");
-}
+/*function retrieve() {
+    let localData = '';
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        const value = localStorage.getItem(key);
+        localData += `${key}: ${value}<br>`;
+    }
+    demo.innerHTML = localData;
+}*/
 // Remove - удаляет данные из localStorage
-function remove() {
+/*function remove() {
     localStorage.removeItem("lastname");
-}   
+}  */ 
 // Clear - очищает полностью localStorage
 function clearStorage() {
     localStorage.clear();
 }
+
+function saveFruit() {
+    const fruitInput = document.getElementById("fruitInput");
+    const fruit = fruitInput.value.trim();
+    if (!fruit) return;
+
+    // Get existing fruits or start with empty array
+    let fruits = JSON.parse(localStorage.getItem("fruits")) || [];
+    fruits.push(fruit);
+    localStorage.setItem("fruits", JSON.stringify(fruits));
+    fruitInput.value = "";
+    //retrieveFruits();
+}
+
+function retrieveFruits() {
+    let fruits = JSON.parse(localStorage.getItem("fruits")) || [];
+    document.getElementById("demo").innerHTML = fruits.join(", ");
+}
+
+// Optionally, call retrieveFruits on page load
+//retrieveFruits();
 </script>
 
 </body>

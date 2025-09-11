@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Setting a default value to a function parameter.</p>
+<p id="demo"></p>
+<script>
+    /*function myFunction(x, y) {
+        if (y === undefined) {
+            y = 2;
+        }  
+        return x * y;
+    }*/
+   /*let a = (x,y) => {
+        if (y === undefined) {
+            y = 2;
+        }  
+        return x * y;
+    }*/
+  /* let a = (x,y) => {
+        y = (y === undefined) ? 2 : y;
+        return x * y;
+    }*/
+    a = (x,y) => {
+        y = y || 2;
+        return x * y;
+    }
+    demo.innerHTML = a(4);
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Подсчитать Среднее Значение</h1>
+    <input type="number" id="number1" placeholder="Введите первое число"><br><br>
+    <input type="number" id="number2" placeholder="Введите второе число"><br><br>
+    <input type="number" id="number3" placeholder="Введите третье число"><br><br>
+    <button onclick="calculateAverage()">Подсчитать</button>
+    <p id="demo"></p>
+    <script>
+      let calculateAverage = () => {
+        const a = parseInt(number1.value);
+        const b = parseInt(number2.value);
+        const c = parseInt(number3.value);
+        let number = (x, y, z) => (x + y + z)/3;
+        demo.innerHTML = `Среднее значение: ${number(a, b, c)}`;
+    }
+  /*      let calculateAverage = () => {
+            let number = (x, y, z) => x + y + z;
+            const values = [number1, number2, number3].map(n => parseInt(n.value));
+            const sum = number(...values);
+            const average = sum / values.length;
+            demo.innerHTML = `Среднее значение: ${average}`;
+        };*/
+
+    </script>
+</body>
+</html>

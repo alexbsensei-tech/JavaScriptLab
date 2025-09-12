@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of all arguments</title>
+</head>
+<body>
+<input id="nums" placeholder="Enter numbers separated by commas">
+<button onclick="calc()">Calculate Sum</button>
+<div id="result"></div>
+<script>
+  const calc = () => result.textContent = (nums.value.match(/-?\d+(\.\d+)?/g) || []).reduce((s,n) => s + +n, 0);
+</script>
+</body>
+</html>

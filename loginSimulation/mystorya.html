@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Story</title>
+    <link rel="stylesheet" href="css/logincss.css" />
+</head>
+<body>
+    <script>
+        const user = sessionStorage.getItem("loggedInUser");
+        if (user == "alex") {
+            document.body.innerHTML = `<h1>История!</h1><p>В этом мире, где творчество и воображение являются фундаментальными аспектами существования, 
+                люди с раннего возраста учатся использовать слова для создания и формирования реальности. Это мир, где фантазия и креативность не знают
+                 границ, и где даже дети могут создавать удивительные и порой непредсказуемые вещи.</p>`;
+        } else {
+            window.location.href = "index.html";
+        }    
+    </script>
+</body>
+</html>

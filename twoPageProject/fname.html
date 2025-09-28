@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Enter First Name</title>
+  <script>
+    function saveFirstName() {
+      const fname = document.getElementById("fname").value;
+      localStorage.setItem("firstName", fname);
+      window.location.href = "lname.html";
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+  <div class="bg-white p-8 rounded shadow-md w-96">
+    <h2 class="text-xl font-bold mb-4">Enter Your First Name</h2>
+    <input id="fname" type="text" placeholder="First Name"
+           class="w-full p-2 border border-gray-300 rounded mb-4" />
+    <button onclick="saveFirstName()"
+            class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+      Next
+    </button>
+  </div>
+</body>
+</html>

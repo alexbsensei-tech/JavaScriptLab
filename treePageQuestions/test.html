@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base target="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="js/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body id="main" class="flex flex-col items-center justify-center min-h-screen bg-gray-100 bg-gradient-to-r from-[#74ebd5] to-[#ACB6E5] font-sans;">   
+        <h2 class="mb-4 text-3xl">Введите Ваш ник из чата:</h2>
+        <input class="w-96 text-2xl px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" id="nickname" placeholder="Ваш ник чатланин..." />
+        <h2 class="mb-4 text-3xl pt-4">Город (optional):</h2>
+        <input class="w-96 text-2xl px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" id="city" placeholder="Введите Ваш город..." />
+        <h2 class="mb-4 text-3xl pt-4">Время в чате (optional):</h2>
+        <input class="w-96 text-2xl px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" id="time" placeholder="Сколько вы уже в чате?" />
+    <form id="form" class="space-y-4 pt-4 pb-4 w-96">
+        <p class="text-gray-600 mb-2 text-xl font-bold">1. Верите ли вы, что вы особенный и уникальный?</p>
+        <div>
+            <input type="radio" name="q1" id="q1_no" value="0">
+            <label for="q1_no">Нет</label>
+            <input type="radio" name="q1" id="q1_yes" value="1">
+            <label for="q1_yes">Да</label>
+        </div>
+        <p class="text-gray-600 mb-2 text-xl font-bold">2. Ожидаете ли вы особого отношения к себе?</p>
+        <div>
+            <input type="radio" name="q2" id="q2_no" value="0">
+            <label for="q2_no">Нет</label>
+            <input type="radio" name="q2" id="q2_yes" value="1">
+            <label for="q2_yes">Да</label>
+        </div>
+        <p class="text-gray-600 mb-2 text-xl font-bold">3. Часто ли вы используете других людей для достижения своих целей?</p>
+        <div>
+            <input type="radio" name="q3" id="q3_no" value="0">
+            <label for="q3_no">Нет</label>
+            <input type="radio" name="q3" id="q3_yes" value="1">
+            <label for="q3_yes">Да</label>
+        </div>
+        <p class="text-gray-600 mb-2 text-xl font-bold">4. Испытываете ли вы трудности с критикой в свой адрес?</p>
+        <div>
+            <input type="radio" name="q4" id="q4_no" value="0">
+            <label for="q4_no">Нет</label>
+            <input type="radio" name="q4" id="q4_yes" value="1">
+            <label for="q4_yes">Да</label>
+        </div>
+        <p class="text-gray-600 mb-2 text-xl font-bold">5. Склонны ли вы переоценивать свои достижения и способности?</p>
+        <div>
+            <input type="radio" name="q5" id="q5_no" value="0">
+            <label for="q5_no">Нет</label>
+            <input type="radio" name="q5" id="q5_yes" value="1">
+            <label for="q5_yes">Да</label>
+        </div>
+        <p class="text-gray-600 mb-2 text-xl font-bold">6. Часто ли вы завидуете другим людям?</p>
+        <div>
+            <input type="radio" name="q6" id="q6_no" value="0">
+            <label for="q6_no">Нет</label>
+            <input type="radio" name="q6" id="q6_yes" value="1">
+            <label for="q6_yes">Да</label>
+        </div>
+        <p class="text-gray-600 mb-2 text-xl font-bold">7. Испытываете ли вы трудности с эмпатией к другим людям?</p>
+        <div>
+            <input type="radio" name="q7" id="q7_no" value="0">
+            <label for="q7_no">Нет</label>
+            <input type="radio" name="q7" id="q7_yes" value="1">
+            <label for="q7_yes">Да</label>
+        </div>
+        <p class="text-gray-600 mb-2 text-xl font-bold">8. Склонны ли вы манипулировать другими людьми для достижения своих целей?</p>
+        <div>
+            <input type="radio" name="q8" id="q8_no" value="0">
+            <label for="q8_no">Нет</label>
+            <input type="radio" name="q8" id="q8_yes" value="1">
+            <label for="q8_yes">Да</label>
+        </div>
+        <div class="flex justify-center">
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
+             Отправить
+            </button>
+        </div>
+    </form>
+</body>
+</html>  

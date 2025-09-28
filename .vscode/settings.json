@@ -1,0 +1,9 @@
+{
+    "liveServer.settings.https": {
+        "enable": true,
+        "cert": "C:\\Users\\Alex\\OneDrive\\Desktop\\ProgrammingClasses\\JavaScriptLab\\ssl\\localhost.pem",
+        "key": "C:\\Users\\Alex\\OneDrive\\Desktop\\ProgrammingClasses\\JavaScriptLab\\ssl\\localhost-key.pem",
+        "passphrase": "password" // Optional, if your key is encrypted
+    },
+    "liveServer.settings.port": 5501
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile</title>
+  <link rel="stylesheet" href="css/logincss.css" />
+</head>
+<body>
+  <h2>User Profile</h2>
+  <script>
+    const user = sessionStorage.getItem("loggedInUser");
+    if (user == "sveta") {
+      document.body.innerHTML = `<h1>Welcome, ${user}!</h1><p>You are now logged in.</p> <a href="myStory.html">Story!</a>`;
+    } else if (user == "alex") {
+      document.body.innerHTML = `<h1>Welcome, ${user}!</h1><p>You are now logged in.</p> <a href="mystorya.html">Story!</a>`;
+    } else {
+      window.location.href = "index.html";
+    }
+
+  </script>
+</body>
+</html>

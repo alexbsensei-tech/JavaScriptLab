@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>Array Destructuring</h2>
+<p id="demo"></p>
+<script>
+    // Create an Array
+    const numbers = [10, 20, 30, 40, 50, 60, 70];
+    // Destructuring
+    const [a,b, ...rest] = numbers;
+    // Display the Values
+    document.getElementById("demo").innerHTML =
+    "<p>a is " + a +
+    "<p>b is " + b +
+    "<p>the rest is " + rest;
+</script>
+</body>
+</html>

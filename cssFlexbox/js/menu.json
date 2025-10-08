@@ -1,0 +1,8 @@
+{
+  "menuItems": [
+    { "name": "Home", "url": "/" },
+    { "name": "Contact", "url": "/contact" },
+    { "name": "About", "url": "/about" },
+    { "name": "Legal", "url": "/legal" }
+  ]
+}

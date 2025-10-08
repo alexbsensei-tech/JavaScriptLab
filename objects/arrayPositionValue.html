@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>Array Destructuring</h2>
+<p>We can pick up values from specific index locations of an array:</p>
+<p id="demo"></p>
+<script>
+    // Create an Array
+    const fruits = ["Bananas", "Oranges", "Apples", "Mangos"];
+    const {[0]:fruit1 ,[1]:fruit2} = fruits;
+    // Display Primitive Values
+    demo.innerHTML = fruit1 + " " + fruit2;
+</script>
+</body>
+</html>

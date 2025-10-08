@@ -2,6 +2,7 @@
 const users = {
   alex: "secure123",
   sam: "pass456",
+  taylor: "mypassword11"
 };
 
 document.getElementById("loginForm").addEventListener("submit", function (e) {

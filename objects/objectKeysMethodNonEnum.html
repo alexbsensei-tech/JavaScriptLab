@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Object</h1>
+<h2>The Object.keys() Method</h2>
+<p>This example list the enumerable properties of an object.</p>
+<p id="demo"></p>
+<script>
+    // Create an object:
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        language: "EN"
+    }
+    // Change the language Property
+    Object.defineProperty(person, "language", {enumerable:false});
+    // Display all Enumerable Properties
+    demo.innerHTML = Object.keys(person);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Objects</h1>
+<h2>The Object.preventExtensions() Method</h2>
+<p id="demo"></p>
+<script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    Object.preventExtensions(fruits);
+    // Test Error
+    let text = "";
+    try {
+    fruits.push("Kiwi");
+    }
+    catch (err) {
+    text = err;
+    }
+    demo.innerHTML = text;
+</script>
+</body>
+</html>

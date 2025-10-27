@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Objects</h1>
+<h2>The Object.freeze() Method</h2>
+<p id="demo"></p>
+<script>
+    "use strict"
+    // Create Object
+    const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+    };
+    // Freeze Object
+    Object.freeze(person)
+    // Test Error
+    let text;
+    try {
+    person.age = 51;
+    text = Object.values(person);
+    }
+    catch (err) {
+    text = err;
+    }
+    demo.innerHTML = text;
+</script>
+</body>
+</html>

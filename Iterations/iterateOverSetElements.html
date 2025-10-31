@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Iterables</h1>
+<h2>Iterate over Set Elements</h2>
+<p id="demo"></p>
+<script>
+    // Create a Set
+    const letters = new Set(["a","b","c"]);
+    // Iterate over the set elementss
+    let text = "";
+    for (const x of letters) {
+        text += x + "<br>";
+    }
+    demo.innerHTML = text;
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Iterators</h1>
+<h2>The map() Method</h2>
+<p>The map() method returns a new iterator with all elements transformed by a map function.</p>
+<p id="demo"></p>
+<script>
+    // Create an iterator
+    const myIterator = Iterator.from("123456789");
+    // Map the Iterator
+    const mappedIterator = myIterator.map(x => x * 2);
+    // Iterate over all elements
+    let text = "";
+    for (const x of mappedIterator) {
+        text += x + "<br>";
+    }
+    demo.innerHTML = text;
+</script>
+</body>
+</html>

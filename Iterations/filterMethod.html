@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Iterators</h1>
+<h2>The filter() Method</h2>
+<p id="demo"></p>
+<script>
+    // Create an iterator
+    const myIterator = Iterator.from([32, 33, 16, 40]);
+    // Filter the iterator
+    const filteredIterator = myIterator.filter(x => x > 18);
+    // Iterate over the filtered elements
+    let text = "";
+    for (const x of filteredIterator) {
+        text += x + "<br>";
+    }
+    demo.innerHTML = text;
+</script>
+</body>
+</html>

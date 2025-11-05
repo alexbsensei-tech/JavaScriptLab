@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Iterators</h1>
+<h2>The take Method</h2>
+<p>The take() method returns a new iterator that yields a specified number of elements.</p>
+<p id="demo"></p>
+<script>
+    // Create an iterator
+    const myIterator = Iterator.from([1, 2, 3, 4, 5, 6]);
+    // Take the first five elements
+    const firstFive = myIterator.take(5);
+    // Iterate over all elements
+    let text = "";
+    for (const x of firstFive) {
+        text += x + "<br>";
+    }
+    demo.innerHTML = text;
+</script>
+</body>
+</html>

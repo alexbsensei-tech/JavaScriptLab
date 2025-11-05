@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Iterators</h1>
+<h2>The flatMap() Method</h2>
+<p>The flatMap() method returns a new iterator with all elements transformed by a flatmap function.</p>
+<p id="demo"></p>
+<script>
+    // Create an iterator
+    const myIterator = Iterator.from([1, 2, 3, 4, 5, 6]);
+    // Map the Iterator
+    const mappedIterator = myIterator.flatMap(x => [x, x * 10]);
+    // Iterate over the elements
+    let text = "";
+    for (const x of mappedIterator) {
+        text += x + "<br>";
+    }
+    demo.innerHTML = text;
+</script>
+</body>
+</html>

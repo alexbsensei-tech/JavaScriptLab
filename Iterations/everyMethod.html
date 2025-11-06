@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Iterators</h1>
+<h2>The every() Method</h2>
+<p>The every() method teturns true if all elements in an interator pass a test provided by a function.</p>
+<p id="demo"></p>
+<script>
+    // Create an Iterator
+    const myIterator = Iterator.from("123456789");
+    // Is every Element greater than 7?
+    let result = myIterator.every(x => x > 7);
+    demo.innerHTML = result;
+</script>
+</body>
+</html>

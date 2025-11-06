@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Iterators</h1>
+<h2>The reduce() Method</h2>
+<p>The reduce() method executes a reducer function for each iterator element.</p>
+<p id="demo"></p>
+<script>
+    function myFunc(total, num) {
+    return total + num;
+    }
+    // Create an Iterator
+    const myIterator = Iterator.from([175, 50, 25]);
+    // Reduce the Iterator
+    let result = myIterator.reduce(myFunc);
+    demo.innerHTML = "The sum of all items is: " + result;
+</script>
+</body>
+</html>

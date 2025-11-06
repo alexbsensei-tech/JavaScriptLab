@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Iterators</h1>
+<h2>The find() Method</h2>
+<p>The find() method returns the value of the first iterator element that passes a test provided by a test function.</p>
+<p id="demo"></p>
+<script>
+    // Create an iterator
+    const myIterator = Iterator.from([3, 10, 18, 30, 20]);
+    // Find first greater than 18
+    let result = myIterator.find(x => x > 18);
+        demo.innerHTML = result;
+    </script>
+</body>
+</html>

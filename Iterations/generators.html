@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Generators</h1>
+<p>A generator returns an object with two properties: value and done.</p>
+<p id="demo"></p>
+<script>
+    function* myStream() {
+    // return {value:1, done:false}
+    yield 1;
+    // return {value:2, done:false}
+    yield 2;
+    // return {value:3, done:true}
+    return 3;
+    }
+    // Create a Generator
+    let myGenerator = myStream();
+    let text = "";
+    // Loop the Generator
+    for (let value of myGenerator) {
+        text += value + "<br>";
+    }
+    demo.innerHTML = text;
+</script>
+</body>
+</html>

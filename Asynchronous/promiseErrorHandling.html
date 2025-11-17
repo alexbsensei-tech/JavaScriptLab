@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Promise Error Handling</title>
+</head>
+<body>
+  <h2>Promise Error Handling Example</h2>
+  <p id="status">Running operation...</p>
+
+  <script>
+    const riskyOperation = (shouldFail) => { // Function that returns a Promise
+      return new Promise((resolve, reject) => { // Create a new Promise
+        if (shouldFail) { // Simulate an error condition
+          reject("Something went wrong!"); // Reject the Promise with an error message
+        } else {        // No error
+          resolve("Success!"); // Resolve the Promise with a success message
+        }
+      });
+    };
+
+    riskyOperation(true) // Call the function with true to simulate failure
+      .then((msg) => { // Handle success
+        document.getElementById("status").textContent = "Success: " + msg;
+      })
+      .catch((err) => { // Handle error
+        document.getElementById("status").textContent = "Error: " + err;
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Basic Promise Example</title>
+</head>
+<body>
+  <h2>Basic Promise Example</h2>
+  <p id="output">Loading...</p>
+  <script>
+    const fetchData = () => { // Simulate an asynchronous operation arrow function
+      return new Promise((resolve) => { // Create a new Promise
+        setTimeout(() => { // Simulate a delay
+          resolve("Data loaded!"); // Resolve the Promise with data
+        }, 1000); // 1 second delay
+      });
+    };
+    fetchData().then((data) => { // Handle the resolved Promise
+      document.getElementById("output").textContent = data; // Display the data
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chained Promises Example</title>
+</head>
+<body>
+  <h2>Chained Promises Example</h2>
+  <ul id="results"></ul>
+
+  <script>
+    const double = (num) => { // Function that returns a Promise arrow function
+      return new Promise((resolve) => { // Create a new Promise
+        setTimeout(() => {
+          resolve(num * 2);
+        }, 500);
+      });
+    };
+
+    const resultsList = document.getElementById("results"); // Get the results list element
+
+    double(5) // Start the chain with an initial value 5
+      .then((result) => { // First then() handler
+        resultsList.innerHTML += `<li>${result}</li>`;
+        return double(result);
+      })
+      .then((result) => { // Second then() handler
+        resultsList.innerHTML += `<li>${result}</li>`;
+        return double(result);
+      })
+      .then((result) => { // Third then() handler
+        resultsList.innerHTML += `<li>${result}</li>`;
+      });
+  </script>
+</body>
+</html>

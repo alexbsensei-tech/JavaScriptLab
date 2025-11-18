@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript async / await</h1>
+<h2 id="demo"></h2>
+<script>
+    async function myDisplay() { // Declare async function
+    let myPromise = new Promise(function(resolve, reject) { // Create a Promise
+        resolve("Hello My Friend !!"); // Resolve the Promise
+    });
+    demo.innerHTML = await myPromise; // Wait until the Promise is resolved
+    }
+    myDisplay(); // Call the async function
+</script>
+</body>
+</html>

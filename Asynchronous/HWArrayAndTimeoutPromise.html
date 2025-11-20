@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Promise Run Example</title>
+    <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #runBtn {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    #runBtn:hover {
+      background-color: #005a9e;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+      background-color: #ffffff;
+      padding: 16px 24px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      min-width: 300px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+</head>
+<body>
+  <button id="runBtn">Run</button>
+  <div id="output"></div>
+
+  <script>
+    const runBtn = document.getElementById('runBtn');
+    const output = document.getElementById('output');
+
+    // Promise that resolves when the button is clicked
+    const waitForClick = new Promise((resolve) => { // create a new Promise
+      runBtn.addEventListener('click', () => { // add click event listener
+        resolve('clicked'); // resolve the promise when clicked
+      }, { once: true }); // ensures it only resolves once
+    });
+
+    // Promise that rejects after 10 seconds
+    const timeout = new Promise((_, reject) => {// create a new Promise
+      setTimeout(() => {// set a timeout
+        reject('Time has run out'); // reject the promise after 10 seconds
+      }, 10000);
+    });
+
+    // Race between click and timeout
+    Promise.race([waitForClick, timeout]) // racing the two promises
+      .then(() => { // if the click promise resolves first
+        const arr = [1, 2, 3, 4, 5]; // create an array
+        output.innerHTML = arr.join(', ') + '<br>Run without errors'; // display the array and success message
+      })
+      .catch((msg) => { // if the timeout promise rejects first
+        output.innerHTML = msg; // display the timeout message
+      });
+  </script>
+</body>
+</html>

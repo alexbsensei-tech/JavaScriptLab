@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Modules</h1>
+<p id="demo"></p>
+<script type="module">
+    import * as person from "./person.js";
+    let text = "My name is " + person.name + ", I am " + person.age + ".";
+    demo.innerHTML = text;
+</script>
+</body>
+</html>

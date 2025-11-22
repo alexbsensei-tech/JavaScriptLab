@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Modules</h1>
+<h3>Import PI, add, subtract from math.js</h3>
+<p id="demo"></p>
+<script type="module">
+    import { PI, add, subtract } from './math.js';
+    demo.innerHTML = PI + "<br>" + add(3,2) + "<br>" + subtract(3,2);
+</script>  
+</body>
+</html>

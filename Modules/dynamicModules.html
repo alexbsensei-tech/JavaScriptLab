@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Dynamic Modules</h1>
+<p id="demo"></p>
+<script>
+    async function run() {
+    const module = await import("./math.js");
+    let result = module.add(2, 3);
+        demo.innerHTML = result;
+    }
+    run();
+</script>
+</body>
+</html>

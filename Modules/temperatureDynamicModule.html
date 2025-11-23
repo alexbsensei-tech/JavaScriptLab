@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Dynamic Modules</h1>
+<p id="demo"></p>
+<script>
+    async function run(x) {
+    const module = await import("./temperatures.js");
+    let celsius = module.toCelsius(x);
+    demo.textContent = celsius + " Celcius";
+    }
+    run(50);
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Reflect Object</h1>
+<h2>The get() Method</h2>
+<p id="demo"></p>
+<script>
+    // Create an Object
+    const user = {name:"Jan", age:40};
+    // Get the value of age
+    let age = Reflect.get(user, "age");
+    demo.innerHTML = "Age: " + age;
+</script>
+</body>
+</html>

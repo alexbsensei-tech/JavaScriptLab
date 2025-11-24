@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Reflect Object</h1>
+<h2>The apply() Method</h2>
+<p id="demo"></p>
+<script>
+    // Create a Function
+    function greet(message) {
+    return message + ", " + this.name;
+    }
+    // Create an Object
+    const person = {name: "Jan"};
+    // Apply the Function to the Object
+    let msg = Reflect.apply(greet, person, ["Hello"]);
+    demo.innerHTML = msg;
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Reflect Object</h1>
+<h2>The has() Method</h2>
+<p id="demo"></p>
+<script>
+    // Create an Object
+    const person = {name: "John", lastname: "Doe"};
+    // Is name a Property?
+    let answer = Reflect.has(person, "name");
+    demo.innerHTML = "The answer is " + answer;
+</script>
+</body>
+</html>

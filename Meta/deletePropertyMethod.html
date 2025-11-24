@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Reflect Object</h1>
+<h2>The deleteProperty() Method</h2>
+<p id="demo"></p>
+<script>
+    // Create an Object
+    const person = {name: "John", lastname: "Doe"};
+    // Delete the name Property
+    Reflect.deleteProperty(person, "name");
+    demo.innerHTML = Object.keys(person);
+</script>
+</body>
+</html>

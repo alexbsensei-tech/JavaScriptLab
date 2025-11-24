@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Reflect Object</h1>
+<h2>The defineProperty() Method</h2>
+<p id="demo"></p>
+<script>
+    // Create an Object
+    const user = {};
+    // Define a new Propery
+    Reflect.defineProperty(user, "id", {
+    value: 123,
+    writable: false
+    });
+    demo.innerHTML = "User id is " + user.id;
+</script>
+</body>
+</html>

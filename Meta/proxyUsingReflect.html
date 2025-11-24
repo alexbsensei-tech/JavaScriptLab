@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Proxy</h1>
+<h2>Using Reflect</h2>
+<p id="demo"></p>
+<script>
+    // Create an Object
+    const user = { name: "Jan", age: 40 };
+    // Create a Proxy
+    const proxy = new Proxy(user, {
+    get(target, prop) {
+        // safe forwarding
+        return Reflect.get(target, prop);
+    },
+    set(target, prop, value) {
+        // safe forwarding
+        return Reflect.set(target, prop, value);
+    }
+    });
+    demo.innerHTML = proxy.name + " " + proxy.age;
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Proxy</h1>
+<h2>The get() and set() Traps</h2>
+<p id="demo"></p>
+<script>
+    // Create an Object
+    const user = { name: "Jan", age: 40 };
+    //Create a Proxy
+    const proxy = new Proxy(user, {
+    get(target, property) {
+        log("Getting: " + property);
+        return target[property];
+    },
+    set(target, property, value) {
+    log("Setting: " + property);
+        return target[property];
+    }
+    });
+    function log(message) {
+        const time = new Date().toLocaleTimeString();
+        demo.innerHTML += "[" + time + "] " + message + "<br>";
+    }
+    proxy.name = "John";
+    proxy.age = 42;
+    let text1 = proxy.name;
+    let text2 = proxy.age
+</script>
+</body>
+</html>

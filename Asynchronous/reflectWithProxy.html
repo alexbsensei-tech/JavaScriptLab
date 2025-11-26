@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Proxy</h1>
+<h2>The Reflect.set() Method</h2>
+<p>Log changes to all property values:</p>
+<p id="demo"></p>
+<script>
+    // Create an Object
+    const user = { name: "Jan", age: 40 };
+    // Create a Proxy
+    const proxy = new Proxy(user, {
+    set(target, property, value) {
+        // safe forwarding
+        log(property + ": " + value);
+        return Reflect.set(target, property, value);
+    }
+    });
+    function log(message) {
+        const time = new Date().toLocaleTimeString();
+        demo.innerHTML += "[" + time + "] " + message + "<br>";
+    }
+    proxy.name = "John";
+    proxy.age = 45;
+    proxy.name = "Paul";
+</script>
+</body>
+</html>

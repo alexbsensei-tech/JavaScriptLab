@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Решение: Promises в JavaScript</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; }
+    #output { border: 1px solid #ccc; padding: 1rem; border-radius: 8px; background: #f9f9f9; }
+    .step { margin: .5rem 0; padding: .5rem; border-bottom: 1px dashed #ccc; }
+  </style>
+</head>
+<body>
+  <h1>📘 Решение задания: Promises</h1>
+  <p>Результаты будут отображаться прямо на странице:</p>
+
+  <div id="output"></div>
+
+  <script>
+    const outputDiv = document.getElementById("output");
+
+    function addMessage(msg) {
+      const p = document.createElement("div");
+      p.className = "step";
+      p.textContent = msg;
+      outputDiv.appendChild(p);
+    }
+
+    function fetchData() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Данные успешно получены!");
+          // reject("Ошибка при получении данных!");
+        }, 2000);
+      });
+    }
+
+    function processData() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Данные успешно обработаны!");
+        }, 1000);
+      });
+    }
+
+    // Используем цепочку Promises
+    fetchData()
+      .then(result => {
+        addMessage(result);
+        return processData();
+      })
+      .then(result => {
+        addMessage(result);
+      })
+      .catch(error => {
+        addMessage("Ошибка: " + error);
+      });
+  </script>
+</body>
+</html>

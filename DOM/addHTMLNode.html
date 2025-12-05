@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript HTML DOM</h2>
+<p>Add a new HTML Element.</p>
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+<script>
+    const para = document.createElement("p"); // добавляем новый элемент параграфа
+    const node = document.createTextNode("This is new."); // создаем текстовый узел
+    para.appendChild(node); // добавляем текстовый узел в параграф
+    const element = document.getElementById("div1"); // получаем элемент с id "div1"
+    element.appendChild(para); // добавляем новый параграф в div
+</script>
+</body>
+</html>

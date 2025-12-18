@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Convert a JSON string into a JavaScript object.</h2>
+<p id="demo"></p>
+<script>
+    const myJSON = '{"name":"John", "age":31, "city":"New York"}';
+    const myObj = JSON.parse(myJSON);
+    document.getElementById("demo").innerHTML = myObj.name;
+</script>
+</body>
+</html>

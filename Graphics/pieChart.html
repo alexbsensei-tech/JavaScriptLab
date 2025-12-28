@@ -12,3 +12,19 @@
 </script>
 </body>
 </html>
+const data = [{
+    x: [1, 2, 3, 4, 5],
+    y: [1, 3, 2, 4, 5],
+    type: 'scatter'
+}];
+
+const layout = {
+    title: 'Chart with Custom Backgrounds',
+    plot_bgcolor: '#e5ecf6', // Light gray-blue background inside the plot area
+    paper_bgcolor: '#fff3', // Semi-transparent container background
+    // You can also use color names, e.g., 'white' or 'lightblue'
+    // To make it transparent: 'rgba(0,0,0,0)'
+};
+
+Plotly.newPlot('myDiv', data, layout);
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Catch the Square</title>
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #111;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #gameArea {
+    position: relative;
+    width: 90vw;
+    height: 70vh;
+    border: 2px solid #444;
+    margin-top: 20px;
+    background: #222;
+  }
+
+  #target {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #4caf50;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.1s;
+  }
+
+  #target:active {
+    background: #66ff66;
+  }
+
+  #score, #timer {
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+
+  #startBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<h1>Catch the Square</h1>
+<div id="score">Score: 0</div>
+<div id="timer">Time: 10</div>
+<button id="startBtn">Start Game</button>
+
+<div id="gameArea">
+  <div id="target" style="display:none;"></div>
+</div>
+
+<script>
+  const target = document.getElementById("target");
+  const gameArea = document.getElementById("gameArea");
+  const scoreEl = document.getElementById("score");
+  const timerEl = document.getElementById("timer");
+  const startBtn = document.getElementById("startBtn");
+
+  let score = 0;
+  let timeLeft = 10;
+  let gameInterval;
+  let timerInterval;
+
+  function randomPosition() {
+    const areaRect = gameArea.getBoundingClientRect();
+    const size = 50;
+
+    const x = Math.random() * (areaRect.width - size);
+    const y = Math.random() * (areaRect.height - size);
+
+    target.style.left = x + "px";
+    target.style.top = y + "px";
+  }
+
+  function startGame() {
+    score = 0;
+    timeLeft = 10;
+    scoreEl.textContent = "Score: 0";
+    timerEl.textContent = "Time: 10";
+    target.style.display = "block";
+
+    randomPosition();
+
+    target.onclick = () => {
+      score++;
+      scoreEl.textContent = "Score: " + score;
+      randomPosition();
+    };
+
+    timerInterval = setInterval(() => {
+      timeLeft--;
+      timerEl.textContent = "Time: " + timeLeft;
+      if (timeLeft <= 0) endGame();
+    }, 1000);
+  }
+
+  function endGame() {
+    clearInterval(timerInterval);
+    target.style.display = "none";
+    alert("Time's up! Your score: " + score);
+  }
+
+  startBtn.onclick = startGame;
+</script>
+
+</body>
+</html>

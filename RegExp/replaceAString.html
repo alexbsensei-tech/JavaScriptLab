@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions</h1>
+<h2>The replace() Method</h2>
+<p>Replace "Microsoft" with "New York" in the paragraph below:</p>
+<p id="demo">Please visit Microsoft!</p>
+<script>
+    let text = document.getElementById("demo").innerHTML;
+    text = text.replace(/Microsoft/, "New York");
+    document.getElementById("demo").innerHTML = text;
+</script>
+</body>
+</html>

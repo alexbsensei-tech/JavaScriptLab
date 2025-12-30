@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions</h1>
+<h2>The ? Quantifier</h2>
+<p>A global search for a "1", followed by zero or one "0" characters:</p>
+<p id="demo"></p>
+<script>
+    let text = "1, 100 or 1000?";
+    const pattern = /10?/g;
+    let result = text.match(pattern);
+    document.getElementById("demo").innerHTML = result;
+    </script>
+</body>
+</html>
+
+
+// Match beginning of string
+const pattern = /^NewYork/;
+
+// Match end of string
+const pattern = /NewYork$/;

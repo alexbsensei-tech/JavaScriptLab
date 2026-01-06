@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions</h1>
+<h2>The /y Flag</h2>
+<p>The /y flag must be set to allow matches from a position.</p>
+<p id="demo"></p>
+<script>
+    let text = "abc def ghi";
+    const pattern = /\w+/y; // Флаг /y означает, что регулярное выражение будет искать совпадения, начиная с позиции, указанной в свойстве lastIndex
+    // Start match from position 4
+    pattern.lastIndex = 4;
+    let result = text.match(pattern);
+    document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>

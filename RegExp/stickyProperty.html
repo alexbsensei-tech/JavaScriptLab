@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions</h1>
+<h2>The sticky Property</h2>
+<p>Returns true if the /y flag is set.</p>
+<p id="demo"></p>
+<script>
+    const pattern = /SanFransisco/y; // флаг /y позволяет искать совпадения только в том месте, где закончилась предыдущая проверка
+    let result = pattern.sticky;
+    document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions</h1>
+<h2>Groups Modifier (?flag)</h2>
+<p>Search for "w3schools tutorials" (with only W3Schools case-intensitive):</p>
+<p id="demo"></p>
+<script>
+    let text = "JavaScript tutorials.";
+    const pattern = /(?i:JavaScript) tutorials/;
+    let result = pattern.test(text);
+    document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>

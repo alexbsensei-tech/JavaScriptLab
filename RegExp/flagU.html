@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions</h1>
+<h2>The /u Flag</h2>
+<p>The /u flag makes JavaScript regular expressions "Unicode-aware".</p>
+<p id="demo"></p>
+<script>
+    let text = "䷀";
+    const pattern = /\u{04DC0}/u; // подходящий символ в Юникоде
+    let result = pattern.test(text); // true, так как символ соответствует шаблону
+    document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>

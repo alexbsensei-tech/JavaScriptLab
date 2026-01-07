@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions</h1>
+<h2>The global Property</h2>
+<p>Returns true if the /g flag is set.</p>
+<p id="demo"></p>
+<script>
+    const pattern = /Khabarovsk/g; // вернет true, так как флаг /g установлен
+    let result = pattern.global;
+    document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>

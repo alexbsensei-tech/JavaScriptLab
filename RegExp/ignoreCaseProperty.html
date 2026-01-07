@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions</h1>
+<h2>The ignoreCase Property</h2>
+<p>Returns true if the /i flag is set.</p>
+<p id="demo"></p>
+<script>
+    const pattern = /WashingtonDC/i; // вернет true, так как флаг /i установлен
+    let result = pattern.ignoreCase;
+    document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions</h1>
+<h2>Using [] to find a range of characters</h2>
+<p>A global search for the numbers 1 to 4 in a string:</p>
+<p id="demo"></p>
+<script>
+    let text = "123456789";
+    const pattern = /[1-4]/g; // флаг /g позволяет искать все совпадения в строке
+    let result = text.match(pattern);
+    document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>

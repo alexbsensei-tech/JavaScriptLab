@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions</h1>
+<h2>Lookahead Assertion</h2>
+<p>Match "LordOfTheRings" if "LordOfTheRings" is followed by " Tolkien".</p>
+<p id="demo"></p>
+<script>
+    let text = "LordOfTheRings Tolkien";
+    let pattern = new RegExp("LordOfTheRings(?= Tolkien)"); // правило (?=...) проверяет, следует ли за шаблоном указанный шаблон, не включая его в результат
+    let result = pattern.test(text);
+    document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>

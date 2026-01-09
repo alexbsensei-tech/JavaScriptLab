@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions</h1>
+<h2>The \b Metacharacter</h2>
+<p>Search for the characters "LO" in the <b>beginning</b> of a word in the phrase:</p>
+<p>"HELLO, LOOK AT YOU!"</p>
+<p>Found in position: <span id="demo"></span></p>
+<script>
+    let text = "HELLO, LOOK AT YOU!"; 
+    let result = text.search(/\bLO/); // правило \b проверяет, начинается ли слово с указанного шаблона
+    document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>

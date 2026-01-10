@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions</h1>
+<h2>The Lookbehind Assertion</h2>
+<p>Match "Sova" if "Sova" is preceded by "Hello ".</p>
+<p id="demo"></p>
+<script>
+    let text = "Hello Sova";
+    let pattern = /(?<=Hello )Sova/; // (?<=Hello ) - это позитивный lookbehind, который проверяет, что перед "Sova" есть "Hello "
+    let result = pattern.test(text);
+    document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>

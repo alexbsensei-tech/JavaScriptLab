@@ -1,0 +1,17 @@
+!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions</h1>
+<h2>Named Capturing Groups</h2>
+<p id="demo"></p>
+<script>
+    const text = "Name: John Doe";
+    // Using named capturing groups
+    const regex = /(?<firstName>\w+) (?<lastName>\w+)/; // (?<firstName>\w+) - это именованная группа для имени, (?<lastName>\w+) - для фамилии
+    const match = text.match(regex);
+    let fName = match.groups.firstName;
+    let lName = match.groups.lastName;
+    document.getElementById("demo").innerHTML = "Last Name: " + match.groups.lastName;
+</script>
+</body>
+</html>

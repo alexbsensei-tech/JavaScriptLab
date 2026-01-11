@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions</h1>
+<h2>The {n} Quantifier</h2>
+<p>A global search for a sequence of at least n (3) digits:</p>
+<p id="demo"></p>
+<script>
+    let text = "100, 1000 or 10000?";
+    const pattern = /\d{3,}/g; // \d{3,} - это шаблон, который ищет последовательность из 3 или более цифр
+    let result = text.match(pattern);
+    document.getElementById("demo").innerHTML = result;
+</script>
+</body>
+</html>
